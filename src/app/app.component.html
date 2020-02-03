@@ -1,0 +1,11 @@
+<button *ngIf="isShow" (click)="sayHi('1111')">click</button>
+<app-lesson1></app-lesson1>
+<app-lesson2></app-lesson2>
+<app-lesson3></app-lesson3>
+<app-lesson4></app-lesson4>
+
+<p>{{now | date:'yyyy-MM-dd'}}</p> //pipe
+<p>{{users | json}}</p>
+<div *ngFor="let week of weeks; let i = index">{{i}}-{{week}}</div>
+<app-star buttonTitle="hi"></app-star>
+<app-star buttonTitle="123"></app-star>
