@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lesson6.component.scss']
 })
 export class Lesson6Component implements OnInit {
-
+  money: number;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  twMoneyChange(money: number) {  //接收
+    this.money = money;
   }
 
 }

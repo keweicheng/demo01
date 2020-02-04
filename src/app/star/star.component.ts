@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+
 
 @Component({
   selector: 'app-star',
@@ -7,9 +8,14 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class StarComponent implements OnInit {
   @Input() buttonTitle: string;
+  @Output() bClick: EventEmitter<string> = new EventEmitter<string>();
   constructor() { }
 
   ngOnInit() {
+  }
+
+  buttonClick() {
+    this.bClick.emit('哈');
   }
 
 }

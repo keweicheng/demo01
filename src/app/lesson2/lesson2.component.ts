@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { BmiService } from '../bmi.service';
+
 
 @Component({
   selector: 'app-lesson2',
@@ -8,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 export class Lesson2Component implements OnInit {
 score = 0;
 
-  constructor() { }
+  constructor(
+    public bmiService: BmiService  // DI
+  ) { }
 
   ngOnInit() {
   }
 
+  callService(){
+    this.bmiService.sayHello();
+  }
 }

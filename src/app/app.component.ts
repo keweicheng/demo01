@@ -26,8 +26,9 @@ export class AppComponent {/*變數 */
 
   now = new Date();
 
-  sayHi(val: string = '123') {
-    alert(this.url + val);
+  sayHi(word: string = 'Hello') {
+    //alert(this.url + val);
+    alert(word);
   }
 
   changeShow(){

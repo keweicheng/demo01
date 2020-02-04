@@ -1,11 +1,26 @@
-<button *ngIf="isShow" (click)="sayHi('1111')">click</button>
+<!-- <button *ngIf="isShow" (click)="sayHi('1111')">click</button>
+
 <app-lesson1></app-lesson1>
 <app-lesson2></app-lesson2>
 <app-lesson3></app-lesson3>
 <app-lesson4></app-lesson4>
-
+<app-lesson6></app-lesson6>
+<br>
 <p>{{now | date:'yyyy-MM-dd'}}</p> //pipe
 <p>{{users | json}}</p>
 <div *ngFor="let week of weeks; let i = index">{{i}}-{{week}}</div>
-<app-star buttonTitle="hi"></app-star>
-<app-star buttonTitle="123"></app-star>
+<app-star buttonTitle="hi" (bClick)="sayHi($event)"></app-star>
+<app-star buttonTitle="123"></app-star> -->
+
+<router-outlet></router-outlet>
+<a [routerLink]="['/lon1']">lon1</a>
+<br>
+<a [routerLink]="['/lon2']">lon2</a>
+<br>
+<a [routerLink]="['/lon3']">lon3</a>
+<br>
+<a [routerLink]="['/lon4']">lon4</a>
+<br>
+<a [routerLink]="['/lon6']">lon6</a>
+<br>
+<a [routerLink]="['/lon8']">lon8</a>

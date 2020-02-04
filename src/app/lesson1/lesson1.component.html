@@ -1,5 +1,12 @@
 <h1>lesson1</h1>
 tw:
-<input type="number" [(ngModel)]="tw">
+<input [(ngModel)]="tw" (ngModelChange)="moneyChange($event)">
 <p>us:{{tw * 30}}</p>
 <p>jp:{{tw / 5}}</p>
+
+<button (click)="changeService()">change</button>
+
+<br>
+{{bmiService.name}}
+<button (click)='callService()'>SERVICE CALL</button>
+

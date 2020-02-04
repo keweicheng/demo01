@@ -13,7 +13,8 @@ import { Lesson5Component } from './lesson5/lesson5.component';
 import { Lesson6Component } from './lesson6/lesson6.component';
 import { NgPipesModule } from 'ngx-pipes';
 import { StarComponent } from './star/star.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { Lesson8Component } from './lesson8/lesson8.component'
 
 @NgModule({
   declarations: [
@@ -24,13 +25,15 @@ import { StarComponent } from './star/star.component';
     Lesson4Component,
     Lesson5Component,
     Lesson6Component,
-    StarComponent
+    StarComponent,
+    Lesson8Component
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    NgPipesModule
+    NgPipesModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
