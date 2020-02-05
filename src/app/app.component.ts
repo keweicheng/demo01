@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Account } from './model/account.model';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html', /*畫面*/
@@ -14,9 +15,9 @@ export class AppComponent {/*變數 */
 
   weeks = ['星期1', '星期2', '星期3'];
 
-  users =[
-    {name: "abc" , age: 18},
-    {name: "ghi", age: 20},
+  users = [
+    { name: "abc", age: 18 },
+    { name: "ghi", age: 20 },
   ];
 
   acc: Account = {
@@ -31,9 +32,10 @@ export class AppComponent {/*變數 */
     alert(word);
   }
 
-  changeShow(){
+  changeShow() {
     this.isShow = !this.isShow;
   }
+
 
 
 }

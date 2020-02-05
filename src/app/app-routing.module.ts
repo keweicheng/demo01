@@ -6,6 +6,7 @@ import { Lesson3Component } from './lesson3/lesson3.component';
 import { Lesson4Component } from './lesson4/lesson4.component';
 import { Lesson6Component } from './lesson6/lesson6.component';
 import { Lesson8Component } from './lesson8/lesson8.component';
+import { Lesson9Component } from './lesson9/lesson9.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'lon1', pathMatch: 'full' },
@@ -14,9 +15,8 @@ const routes: Routes = [
   { path: 'lon3', component: Lesson3Component },
   { path: 'lon4', component: Lesson4Component },
   { path: 'lon6', component: Lesson6Component },
-  { path: 'lon8', component: Lesson8Component }
-
-
+  { path: 'lon8', component: Lesson8Component },
+  { path: 'lon9/:id', component: Lesson9Component }
 ];
 
 @NgModule({

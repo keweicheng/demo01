@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../http.service';
 import { BookService } from '../book.service';
+import { Book } from '../model/book.model';
 
 @Component({
   selector: 'app-lesson8',
@@ -8,25 +9,34 @@ import { BookService } from '../book.service';
   styleUrls: ['./lesson8.component.scss']
 })
 export class Lesson8Component implements OnInit {
-  books: any;
+  book: Book;
+  postBook: Book = {
+    name: '',
+    price: 0,
+    description: '',
+    is_online: true,
+  };
+
+  putBook: Book;
+
   constructor(
-    public httpService: HttpService,
+    // public httpService: HttpService,
     public bookService: BookService
   ) { }
 
   ngOnInit() {
-    this.httpService.getData().subscribe(
-      data => {
-        console.log(data);
-        this.books = data;
-      },
-      error => {
-        console.log(error);
-      },
-      () => {
-        console.log('finish');
-      }
-    );
+    // this.httpService.getData().subscribe(
+    //   data => {
+    //     console.log(data);
+    //     this.books = data;
+    //   },
+    //   error => {
+    //     console.log(error);
+    //   },
+    //   () => {
+    //     console.log('finish');
+    //   }
+    // );
 
     this.bookService.getBooks().subscribe(
       data => {
@@ -40,15 +50,24 @@ export class Lesson8Component implements OnInit {
       }
     );
 
-    this.bookService.getBook(1).subscribe(
+    this.bookService.getBook(1).subscribe( //印出1個
       data => {
-        console.log(data.);
+        //console.log(data);
+        this.putBook = data;
       },
       error => {
 
       },
       () => {
 
+      }
+    );
+  }
+
+  submitBook() {
+    this.bookService.postBook(this.postBook).subscribe(
+      data => {
+        console.log(data);
       }
     );
   }
